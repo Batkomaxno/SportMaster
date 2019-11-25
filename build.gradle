@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'SportMaster'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'org.testng:testng:6.1.1'
+    testCompile 'com.codeborne:selenide:5.5.0'
+}
+
+test {
+    useTestNG {
+        suites "suite/test.xml"
+    }
+}
+
